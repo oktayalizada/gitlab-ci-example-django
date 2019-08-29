@@ -24,3 +24,12 @@ test:
   - coverage run --source='.' manage.py test gitlab_ci_example_django
   - coverage report -m
   - python manage.py test --settings gitlab_ci_example_django.settings.ci
+
+sonarqube-reports:
+  stage: analysis
+  image: ciricihq/gitlab-sonar-scanner
+  variables:
+    SONAR_URL: http://79.143.180.32:9000
+    SONAR_ANALYSIS_MODE: publish
+  script:
+  - gitlab-sonar-scanner -Dsonar.projectKey=gitlab-ci-example-django -Dsonar.sources=. -Dsonar.host.url=http://79.143.180.32:9000 -Dsonar.login=f81dbb60bd9b88edd38077039fe4abb1b98e7867
