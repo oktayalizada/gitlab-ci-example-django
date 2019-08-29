@@ -31,4 +31,4 @@ sonarqube-reports:
   variables:
     SONAR_ANALYSIS_MODE: publish
   script:
-  - gitlab-sonar-scanner -Dsonar.projectKey=gitlab-ci-example-django -Dsonar.sources=. -Dsonar.host.url=http://sonarqube-server -Dsonar.login=f81dbb60bd9b88edd38077039fe4abb1b98e7867
+  - gitlab-sonar-scanner -Dsonar.projectKey=gitlab-ci-example-django -Dsonar.sources=. -Dsonar.host.url=http://sonarqube-server -Dsonar.login=xxxxxxxxxxxxxxxxxxxxxxxxx
