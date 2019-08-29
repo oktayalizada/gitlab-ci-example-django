@@ -22,4 +22,5 @@ test:
   - pip install -r requirements.txt
   - pip install coverage
   - coverage run --source='.' manage.py test gitlab_ci_example_django
+  - coverage report -m
   - python manage.py test --settings gitlab_ci_example_django.settings.ci
