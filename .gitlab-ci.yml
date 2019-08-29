@@ -18,3 +18,7 @@ sonarqube-reports:
     SONAR_ANALYSIS_MODE: publish
   script:
   - gitlab-sonar-scanner
+  -Dsonar.projectKey=gitlab-ci-example-django \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://79.143.180.32:9000 \
+  -Dsonar.login=3567c1e6807fbba7cde681360e14a62261fda144
